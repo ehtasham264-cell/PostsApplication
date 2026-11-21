@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body,
+#root{
+  height:100%;
+  width:100%
+}
+
+/* Main Section */
+
+/* Image Preview */
+.image-preview {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.image-preview h3 {
+    font-size: 16px;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f1f5f9;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+.create-post-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 20px;
+    height:100%;
+    width:100%;
+}
+
+/* Heading */
+.create-post-section h1 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Form Card */
+.create-post-section form {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* File Input */
+.create-post-section input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    cursor: pointer;
+    color: #475569;
+}
+
+/* Caption Input */
+.create-post-section input[type="text"] {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.create-post-section input[type="text"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* Submit Button */
+.create-post-section button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.create-post-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .create-post-section form {
+        padding: 25px 20px;
+    }
+
+    .create-post-section h1 {
+        font-size: 26px;
+    }
+}
+
+/* Main Feed Section */
+.feed-section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f8fafc;
+}
+
+/* Feed Heading */
+.feed-section h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 35px;
+}
+
+/* Posts Container */
+.posts-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Post Card */
+.post-card {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Card Hover */
+.post-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Post Image */
+.post-card img {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Post Content */
+.post-content {
+    padding: 16px;
+}
+
+/* Caption */
+.post-content p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.5;
+}
+
+/* Empty Feed */
+.empty-feed {
+    text-align: center;
+    color: #64748b;
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .feed-section {
+        padding: 25px 15px;
+    }
+
+    .posts-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .post-card img {
+        height: 250px;
+    }
+
+    .feed-section h1 {
+        font-size: 26px;
+    }
+}
